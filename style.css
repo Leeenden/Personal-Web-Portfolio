@@ -3,147 +3,31 @@
     padding: 0;
     font-family: sans-serif;
 }
-
-
-/* background for index page */
-.indexbackgroundimages{ 
-    width: 100%;
+.pageContainer {
     height: 100vh;
-    background-color: black;
-    background-image: url(Images/plainblack.png); 
-    background-size: cover;
-    background-position: center;
-    position: fixed;
-    overflow: hidden;
-} 
-/* animation for index page */
-.animation{
-    position: absolute;
-    top:45%;
-    left: 65%;
-    transform: translateY(-40%);
-    z-index: 2; 
-    overflow: hidden;
+    min-width: 100%;
+    background: #000;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-/* animation for other pages */
-
-/* background for about page */
-.aboutbackgroundimages{
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    background-size: 100%;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
+.navBar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    height: 5%;
+    min-width: 100%;
+    justify-content: space-evenly;
 }
-/* background for contact page */
-.contactbackgroundimages{
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-}
-/* background for portfolio page */
-.portfoliobackgroundimages{
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    background-size: 100%;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-}
-
-
-/* text settings for index page */
-.indextagline{
-    position: absolute;
-    top: 55%;
-    left: 25%;
-    transform: translateY(-50%);
-    z-index: 2;
-}
-/* links for index page */
-.indexpage{
-    color: black;
-    position: absolute;
-    top: 6%;
-    left: 45%;
-    transform: translateY(-50%);
-    z-index: 2; 
-}
-/* first button on index page to link to about us page */
-.websiteentry{
-    color: black;
-    position: absolute;
-    top: 70%;
-    left: 29%;
-    transform: translateY(-50%);
-    z-index: 2; 
-}
-
-/* HR tag settings */
-hr{
-    width: 90%;
-    border: 0;
-    border-bottom: 1px solid white;
-    margin: 20px auto;
-}
-
-/* links for about page */
-.aboutpage{
-    color: black;
-    position: absolute;
-    top: 6%;
-    left: 55%;
-    transform: translateY(-50%);
-    z-index: 2; 
-}
-/* links for contact page */
-.contactpage{
-    color: black;
-    position: absolute;
-    top: 6%;
-    left: 65%;
-    transform: translateY(-50%);
-    z-index: 2; 
-}
-/* links for portfolio page */
-.portfoliopage{
-    color: black;
-    position: absolute;
-    top: 6%;
-    left: 75%;
-    transform: translateY(-50%);
-    z-index: 2; 
-}
-/* links for account page */
-.accountpage{
-    color: black;
-    position: absolute;
-    top: 6%;
-    left: 85%;
-    transform: translateY(-50%);
-    z-index: 2; 
+.navBar ul{
+    width: 25%;
+    display: flex;
+    justify-content: center;
 }
 /* navbar buttons (contains the page links) */
 button{
-    color: rgb(3, 3, 3);
-    padding: 10px 25px;
-    background: transparent;
-    border: 1px solid rgb(255, 255, 255);
-    box-shadow: 0 0 2px 2px rgb(255, 255, 255);
-    border-radius: 20px;
-    outline: none;
-    cursor: pointer;
-}
-
-/* button for the initial index page */
-.indexbutton{
     color: rgb(3, 3, 3);
     padding: 10px 25px;
     background: transparent;
@@ -159,22 +43,76 @@ button:hover{
     border: 1px solid hsl(197, 94%, 65%);
     box-shadow: 0 0 2px 2px hsl(197, 94%, 65%);
 }
-.indexbutton:hover{
-    background: hsl(197, 94%, 65%);
-    border: 1px solid hsl(197, 94%, 65%);
-    box-shadow: 0 0 2px 2px hsl(197, 94%, 65%);
-}
-
-
-h1 {
-    font-size: 80px;
-    line-height: 80px;
+a {
+    text-decoration: none;
     color: white;
-    position: absolute;
-    top: 65%;
-    left: 2%;
+}
+/* -------------------------- */
+/* home page content */
+/* home page text */
+.headerContainer {
+    width: 82%;
+    height: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:flex-start;
+    flex-direction: column;
+
+    border: 1px solid green;
+}
+.headerContainer #greeting {
+    font-size: 60px;
+}
+.headerContainer #myName, .headerContainer #occupation, .headerContainer #intro{
+    font-size: 70px;
+    
 }
 
+/* animation for home page */
+/* ========================= */
+
+.energy {
+    position: fixed;
+    top: 50%;
+    left: 70%;
+    width: 300px;
+    height: 300px;
+}
+.energy span {
+    position: absolute;
+    width: calc(300px + var(--i));
+    height: calc(300px + var(--i));
+    background: var(--clr);
+    border-radius: 50%;
+    transform-origin: calc(100px + var(--i));
+    animation: animate 5s linear infinite;
+    animation-duration: calc(var(--d));
+    mix-blend-mode: plus-lighter;
+    filter: blur(30px);
+}
+.energy span:nth-child(even) {
+   animation-direction: reverse;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* ========================== */
+/*  About page */
+.aboutCard{
+    min-width: 82%;
+    height: 75%;
+    border: 1px solid green;
+}
+.aboutCard h1 {
+    font-size: 60px;
+}
+
+/* ================================= */
 /* CONTACT PAGE */
 /* all glass card effect */
 .card{
@@ -273,20 +211,7 @@ h1 {
 /*  */
 /*  */
 /* aboutpage settings */
-.aboutcard{
-    width: 90%;
-    max-width: 440px;
-    color: #fff;
-    text-align: center;
-    padding: 50px 30px;
-    border: 2px solid rgba(255,255,255,0.3);
-    box-shadow: 0 0 2px 2px rgb(255, 255, 255);
-    background:rgb(255, 255, 255, 0.2);
-    position: absolute;
-    top: 20%;
-    left: 15%;
-    transform: translateY(0%);
-}
+
 
 .aboutcard h1{
     font-size: 40px;
@@ -343,223 +268,4 @@ h1 {
     max-width: 380px;
     color:rgb(255, 255, 255);
     text-align: center;
-}
-
-/*  */
-/*  */
-
-/* signup/login PAGE (accounts)  */
-
-.cardaccount{
-    width: 90%;
-    max-width: 440px;
-    height: 350px;
-    color: #fff;
-    text-align: center;
-    padding: 10px 20px;
-    border: 2px solid rgb(255, 255, 255);
-    box-shadow: 0 0 2px 2px rgba(255,255,255);
-    background:rgb(255, 255, 255, 0.2);
-    position: absolute;
-    top: 20%;
-    left: 5%;
-}
-
-.cardaccount:hover{
-    width: 100%;
-    max-width: 440px;
-    height: 350px;
-    color: #fff;
-    text-align: center;
-    padding: 10px 20px;
-    border: 2px solid  hsl(197, 94%, 65%);
-    box-shadow: 0 0 2px 2px hsl(197, 94%, 65%);
-    background:rgb(255, 255, 255, 0.2,);
-    position: absolute;
-    top: 20%;
-    left: 5%;
-}
-/* resize and position h2 */
-.cardaccount h2{
-   font-size: 30px;
-   font-weight: 400;
-   margin-top: 20px;
-}
-
-/* contains the below elements */
-.innerbox{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 1s;  
-}
-/* settings for the two card sides */
-.card-front, .card-back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    backface-visibility: hidden;
-}
-
-.card-back{
-    transform: rotateY(180deg);
-}
-
-.input-box{
-    width: 100%;
-    background: transparent;
-    border: 1px solid rgba(255,255,255);
-    box-shadow: 0 0 2px 2px rgba(255,255,255);
-    margin: 10px 10px 10px 10px;
-    height: 32px;
-    border-radius: 20px;
-    padding: 5 5px;
-    box-sizing: border-box;
-    outline:none;
-    text-align:center;
-    color: rgba(255,255,255);
-}
-
-::placeholder{
-    color: rgba(255,255,255);
-    font-size: 12px;
-}
-
-.submit-button{
-    position: relative;
-    position: right;
-    margin-top: 20px;
-    margin-right: 20px;
-    color: rgba(255,255,255);
-}
-
-span{
-    font-size: 13px;
-    margin-left: 10px;
-    position: bottom;
-}
-.cardaccount .btn{
-    margin-top: 20px;
-    left: 5%;
-    color: rgba(255,255,255)
-}
-/*  */
-/*  */
-
-/* program page  */
-.hypertrophy{
-    width: 70%;
-    max-width: 440px;
-    color: #fff;
-    text-align: center;
-    padding: 10px 10px;
-    border: 2px solid rgba(255,255,255);
-    box-shadow: 0 0 2px 2px rgba(255,255,255);
-    background:rgb(255, 255, 255, 0.2);
-    position: absolute;
-    top: 15%;
-    left: 2%;
-    transform: translateY(0%);
-}
-.hypertrophy img{
-        width:140px;
-        border-radius: 10%;    
-}
-    /* resize the h2 tag */
-.hypertrophy h2{
-       font-size: 30px;
-       font-weight: 600;
-       margin-top: 10px;
-}
-    /* resize the */
-.hypertrophy p{
-        font-size: 18px;
-        margin: 10px auto;
-        max-width: 330px;
-        color:rgb(255, 255, 255);
-}
-
-.hypertrophy:hover{
-    color: hsl(197, 94%, 65%);
-    border: 2px solid hsl(197, 94%, 65%);
-    box-shadow: 0 0 2px 2px hsl(197, 94%, 65%);
-}
-
-.strength{
-    width: 70%;
-    max-width: 440px;
-    color: #fff;
-    text-align: center;
-    padding: 10px 10px;
-    border: 2px solid rgba(255,255,255);
-    background:rgb(255, 255, 255, 0.2);
-    box-shadow: 0 0 2px 2px rgba(255,255,255);
-    position: absolute;
-    top: 40%;
-    left: 2%;
-    transform: translateY(0%);
-}
-.strength img{
-    width:140px;
-    border-radius: 10%;    
-}
-/* resize the h2 tag */
-.strength h2{
-   font-size: 30px;
-   font-weight: 600;
-   margin-top: 10px;
-}
-/* resize the */
-.strength p{
-    font-size: 18px;
-    margin: 10px auto;
-    max-width: 330px;
-    color:rgb(255, 255, 255);
-}
-
-.strength:hover{
-    color: hsl(128, 94%, 65%);
-    border: 2px solid hsl(128, 94%, 65%);
-    box-shadow: 0 0 2px 2px hsl(128, 94%, 65%);
-}
-
-.hybrid{
-    width: 70%;
-    max-width: 440px;
-    color: #fff;
-    text-align: center;
-    padding: 10px 10px;
-    border: 2px solid rgba(255,255,255,0.3);
-    box-shadow: 0 0 2px 2px rgba(255,255,255);
-    background:rgb(255, 255, 255, 0.2);
-    position: absolute;
-    top: 65%;
-    left: 2%;
-    transform: translateY(0%);
-}
-
-.hybrid img{
-    width:140px;
-    border-radius: 10%;    
-}
-/* resize the h2 tag */
-.hybrid h2{
-   font-size: 30px;
-   font-weight: 600;
-   margin-top: 10px;
-}
-/* resize the */
-.hybrid p{
-    font-size: 18px;
-    margin: 10px auto;
-    max-width: 330px;
-    color:rgb(255, 255, 255);
-}
-.hybrid:hover{
-    color: hsl(0, 92%, 48%);
-    border: 2px solid hsl(0, 92%, 48%);
-    box-shadow: 0 0 2px 2px hsl(0, 92%, 48%);
 }
