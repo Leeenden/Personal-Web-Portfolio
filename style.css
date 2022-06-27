@@ -81,7 +81,12 @@ a:is(:link, :active, :visited).active {
     flex-direction: column;
     z-index: 10;
 }
-
+.contentContainer img {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
 .contentContainer h1 {
     font-size: 60px;
     height: 10%;
