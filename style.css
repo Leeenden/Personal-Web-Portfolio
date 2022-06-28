@@ -2,6 +2,7 @@
 * { 
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 .pageContainer {
@@ -19,7 +20,7 @@
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
-    height: 5%;
+    height: 12.5%;
     min-width: 100%;
     justify-content: space-around;
     background-color: rgb(255, 255, 255, 0.3);
@@ -35,7 +36,7 @@ button{
     padding: 10px 25px;
     background: transparent;
     border: 1px solid rgb(255, 255, 255);
-    border-radius: 20px;
+    border-radius: 10px;
     outline: none;
     cursor: pointer;
 }
@@ -74,12 +75,14 @@ a:is(:link, :active, :visited).active {
     inset 0 -1px 1px rgba(0, 0, 0, 0.2);
 }
 .contentHomePage{
-    width: 75%;
-    height: 75%;
+    width: 90%;
+    height: 20%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     z-index: 10;
+    border: 1px solid white;
+    
 }
 .contentContainer img {
     width: 500px;
@@ -88,32 +91,42 @@ a:is(:link, :active, :visited).active {
     justify-content: center;
 }
 .contentContainer h1 {
-    font-size: 60px;
+    font-size: 50px;
     height: 10%;
-    width: 100%;
+    min-width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .contentContainer h3 {
-    font-size: 30px;
+    font-size: 35px;
     height: 10%;
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-top: 20px;
 }
-.contentContainer #aboutSection {
+.contentContainer #aboutSectionLib, .contentContainer #aboutSectionLang {
     font-size: 20px;
     width: 45%;
-    height: 80%;
+    height: 60%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
 }
-#aboutSection ion-icon {
+#aboutSectionLang .half {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#aboutSectionLang ion-icon {
     width: 80px;
     height: 80px;
-
+    margin: 0px 20px;
     border: 1px solid white;
 }
 .contentContainer #experienceSection{
@@ -185,7 +198,7 @@ footer {
     position: bottom;
     width: 100%;
     background-color: rgb(255, 255, 255, 0.2);
-    height: 10%;
+    height: 12.5%;
     padding: 10px 30px;
     display: flex;
     justify-content: center;
