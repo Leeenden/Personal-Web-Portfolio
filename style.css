@@ -74,14 +74,6 @@ a:is(:link, :active, :visited).active {
     inset 0 2px 2px rgba(0, 0, 0, 0.2),
     inset 0 -1px 1px rgba(0, 0, 0, 0.2);
 }
-.contentHomePage{
-    width: 90%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 10;
-}
 .contentContainer img {
     width: 500px;
     height: 300px;
@@ -170,59 +162,51 @@ a:is(:link, :active, :visited).active {
 }
 .contentContainer #bioSection{
     font-size: 20px;
-    width: 90%;
-    height: 10%;
+    width: 45%;
+    height: 80%;
 }
 .contentContainer #contactSection {
     font-size: 20px;
     width: 90%;
     height: 80%;
-
-    border:1px solid blue;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
-/* animation for home page */
-/* ========================= */
-
-.energy {
-    position: fixed;
-    top: 35%;
-    left: 40%;
-    width: 300px;
-    height: 300px;
-    z-index: 0;
+#contactSection #linkNames {
+    font-size: 20px;
+    width: 100%;
+    height: 15%;
+    display:flex;
+    justify-content: space-around;
 }
-/* .energy img {
-    position: fixed;
-    top: 36%;
-    left: 37.5%;
-    width: 330px;
-    height: 330px;
-    z-index: 1;
-} */
-.energy span {
-    position: absolute;
-    width: calc(300px + var(--i));
-    height: calc(300px + var(--i));
-    background: var(--clr);
-    border-radius: 50%;
-    transform-origin: calc(100px + var(--i));
-    animation: animate 5s linear infinite;
-    animation-duration: calc(var(--d));
-    mix-blend-mode: plus-lighter;
-    filter: blur(30px);
+#contactSection #aboutLinks {
+    font-size: 20px;
+    width: 100%;
+    height: 40%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
-.energy span:nth-child(even) {
-   animation-direction: reverse;
+#contactSection #externalLinks{
+    font-size: 20px;
+    width: 100%;
+    height: 40%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+#aboutLinks ion-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0px 284px; 
+}
+#externalLinks button {
+    margin: 0px 250px; 
 }
 /* =========================== */
 /* Footer */
@@ -287,111 +271,3 @@ footer p {
     font-size: 1.1em;
 }
 
-/* ========================== */
-/*  About page */
-.aboutCard{
-    min-width: 82%;
-    height: 75%;
-    border: 1px solid green;
-}
-.aboutCard h1 {
-    font-size: 60px;
-}
-
-/* ================================= */
-/* CONTACT PAGE */
-/* all glass card effect */
-.card{
-    width: 90%;
-    max-width: 440px;
-    color: #fff;
-    text-align: center;
-    padding: 50px 30px;
-    border: 2px solid rgba(255,255,255,0.3);
-    box-shadow: 0 0 2px 2px rgb(255, 255, 255);
-    background:rgb(255, 255, 255, 0.2);
-    position: absolute;
-    top: 20%;
-    left: 15%;
-    transform: translateY(0%);
-}
-/* rezize glass card image */
-.card img{
-    width:140px;
-    border-radius: 10%;
-    background-color: transparent;
-}
-.card h1{
-    font-size: 40px;
-    font-weight: 450;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    top: -5%;
-    left: 25%;
-    color: white;
-}
-.card h1:hover{
-    font-size: 40px;
-    font-weight: 450;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    top: -5%; 
-    left: 25%;
-    color: hsl(197, 94%, 65%);
-
-}
-.card:hover{
-    width: 90%;
-    max-width: 440px;
-    color: #fff;
-    text-align: center;
-    padding: 50px 30px;
-    border: 2px solid  hsl(197, 94%, 65%);
-    box-shadow: 0 0 2px 2px hsl(197, 94%, 65%);
-    background:rgb(255, 255, 255, 0.2);
-    position: absolute;
-    top: 20%;
-    left: 15%;
-    transform: translateY(0%);
-}
-/* resize and position h2 */
-.card h2{
-   font-size: 30px;
-   font-weight: 400;
-   margin-top: 20px;
-   text-align: center;
-}
-/* resize and position h3 */
-.card h3{
-    font-size: 25px;
-    font-weight: 350;
-    margin-top: 10px;
-    text-align: center;
-}
-
-/* resize the */
-.card p{
-    font-size: 18px;
-    margin: 10px auto;
-    max-width: 380px;
-    color:rgb(255, 255, 255);
-    text-align: center;
-}
-.card p:hover{
-    font-size: 18px;
-    margin: 10px auto;
-    max-width: 380px;
-    color:hsl(197, 94%, 65%);
-    text-align: center;
-}
-/* resize and position the social links images */
-.card .links img{
-    width: 40px;
-    border-radius: 40%;
-    margin: 10px 5px;
-    transition: 0.5s;
-}
-.card .links img:hover{
-    background: hsl(197, 94%, 65%);
-}
-/*  */
