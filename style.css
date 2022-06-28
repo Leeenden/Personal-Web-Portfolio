@@ -151,6 +151,24 @@ a:is(:link, :active, :visited).active {
     50% { color:  #FFE873;}
     100% { color: #4B8BBE; }
 }
+
+.contentContainer .project {
+    width: 30%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+.project img {
+    width: 90%;
+    height: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .contentContainer #experienceSection{
     font-size: 20px;
     width: 45%;
@@ -173,8 +191,6 @@ a:is(:link, :active, :visited).active {
     flex-wrap: wrap;
     justify-content: center;
 }
-
-
 #contactSection #linkNames {
     font-size: 20px;
     width: 100%;
