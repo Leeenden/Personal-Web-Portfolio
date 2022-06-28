@@ -127,6 +127,38 @@ a:is(:link, :active, :visited).active {
     margin: 0px 20px;
     border: 1px solid white;
 }
+#html {
+    animation: color-change 4.5s infinite;
+}
+@keyframes color-change {
+    0% { color: #e34c26; }
+    50% { color:  #ebebeb;}
+    100% { color: #e34c26; }
+}
+#css {
+    animation: color-change2 4.5s infinite;
+}
+@keyframes color-change2 {
+    0% { color: #2965f1; }
+    50% { color:  #ebebeb;}
+    100% { color: #2965f1; }
+}
+#js {
+    animation: color-change3 4.5s infinite;
+}
+@keyframes color-change3 {
+    0% { color: #FFFF00; }
+    50% { color:  #ebebeb;}
+    100% { color: #FFFF00; }
+}
+#py {
+    animation: color-change4 4.5s infinite;
+}
+@keyframes color-change4 {
+    0% { color: #4B8BBE; }
+    50% { color:  #FFE873;}
+    100% { color: #4B8BBE; }
+}
 .contentContainer #experienceSection{
     font-size: 20px;
     width: 45%;
@@ -143,8 +175,10 @@ a:is(:link, :active, :visited).active {
 }
 .contentContainer #contactSection {
     font-size: 20px;
-    width: 100%;
-    height: 10%;
+    width: 90%;
+    height: 80%;
+
+    border:1px solid blue;
 }
 
 
